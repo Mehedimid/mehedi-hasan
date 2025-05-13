@@ -1,0 +1,33 @@
+.clip-focus-center-out {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  color: #00A3E1; /* Primary text initially */
+  border: 2px solid #fff; /* Primary border */
+  background-color: #ffffff; /* White background initially */
+  box-sizing: border-box;
+}
+
+.clip-focus-center-out::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #00A3E1; /* Primary color on hover */
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transition: clip-path 0.4s ease;
+  z-index: -1;
+}
+
+/* Hover/focus background expansion */
+.clip-focus-center-out:hover::before,
+.clip-focus-center-out:focus::before,
+.clip-focus-center-out:focus-visible::before {
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+}
+
+/* Hover/focus text turns white */
+.clip-focus-center-out:hover,
+.clip-focus-center-out:focus,
+.clip-focus-center-out:focus-visible {
+  color: #ffffff;
+}

@@ -1,0 +1,30 @@
+.clip-focus-center-out-y {
+    position: relative;
+    z-index: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .clip-focus-center-out-y::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color:#00A3E1;  
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transition: clip-path 0.4s ease;
+    z-index: -1;
+  }
+  
+  /* ✅ Apply on hover and focus */
+  .clip-focus-center-out-y:hover::before,
+  .clip-focus-center-out-y:focus::before,
+  .clip-focus-center-out-y:focus-visible::before {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+  
+  /* Change text color on hover and focus */
+  .clip-focus-center-out-y:hover,
+  .clip-focus-center-out-y:focus,
+  .clip-focus-center-out-y:focus-visible {
+    color: white;
+  }
+  
