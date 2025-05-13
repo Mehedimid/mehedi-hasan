@@ -186,16 +186,13 @@ const ContactPage = () => {
                   <Facebook className="w-8 h-8 hover:text-white transition" />
                 </Link>
                 <Link
-                  href={getValidLink(
-                    socialLinks.instagram,
-                    socialLinks.facebook,
-                    socialLinks.github
-                  )}
+                  href="mailto:mehedihasan25276@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Instagram className="w-8 h-8 hover:text-white transition" />
+                  <Mail className="w-8 h-8 hover:text-white transition" />
                 </Link>
+
                 <Link
                   href={getValidLink(socialLinks.twitter, socialLinks.github)}
                   target="_blank"

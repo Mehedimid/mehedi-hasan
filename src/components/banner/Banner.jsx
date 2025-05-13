@@ -29,7 +29,7 @@ const Banner = () => {
         >
           Mehedi <span className="text-primary">Hasan</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-6 font-semibold">
+        <div className="text-xl md:text-2xl text-gray-300 mb-6 font-semibold">
           <Typewriter
           options={{
             strings: [
@@ -44,7 +44,7 @@ const Banner = () => {
             deleteSpeed: 30,
           }}
         />
-        </p>
+        </div>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6">

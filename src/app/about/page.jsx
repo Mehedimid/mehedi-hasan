@@ -1,9 +1,9 @@
 "use client";
 import { UserRound } from "lucide-react";
-import SectionHeader from "@/components/shared/SectionHeader/SectionHeader";
 import SkillBar from "@/components/shared/skillBar/SkillBar";
 import Title from "@/components/shared/sectionHeader/Title";
 import PrimaryButton from "@/components/shared/button/PrimaryButton";
+import SectionHeader from "@/components/shared/sectionHeader/SectionHeader";
 import SecondaryTitle from "@/components/shared/sectionHeader/SecondaryTitle";
 
 const AboutPage = () => {
@@ -71,7 +71,7 @@ const AboutPage = () => {
               <div className="mt-5
               ">
                 {" "}
-                <a href="/assets/resume.pdf" download>
+                <a href="resume_mehedi.pdf" download>
                   <PrimaryButton text="Download resume" />
                 </a>
               </div>
@@ -138,9 +138,9 @@ const AboutPage = () => {
             {/* HSC Section */}
             <div>
               <SecondaryTitle text="Higher Secondary" />
-              <p>Business Studies</p>
-              <p>Sirajganj Govt. College</p>
-              <p className="text-xs text-gray-400">2015 - 2017</p>
+              <p>Science</p>
+              <p>Ashuganj Sar Karkhana College</p>
+              <p className="text-xs text-gray-400">2016 - 2018</p>
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ const Navbar = () => {
   ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Top with image and overlay */}
-        <div className="relative pt-2">
+        <div className="relative">
           <div className="w-full h-44 md:h-52 relative">
             <Image
               src="https://i.postimg.cc/4xBV8YhJ/remove-bg1.png"
