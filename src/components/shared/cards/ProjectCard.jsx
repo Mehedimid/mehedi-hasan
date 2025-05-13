@@ -4,11 +4,12 @@ import { ExternalLink } from "lucide-react";
 import SecondaryTitle from "../sectionHeader/SecondaryTitle";
 import PrimaryButton from "@/components/shared/button/PrimaryButton";
 import SecondaryButton from "../button/SecondaryButton";
+import MotionWrapper from "../motion/MotionWrapper";
 
 
 function ProjectCard({ data, onViewMore }) {
   return (
-    <div>
+    <MotionWrapper direction="up" duration={0.6}>
       <div className="relative h-[300px] rounded-[15px] overflow-hidden group shadow shadow-primary">
         <img
           src={data.image}
@@ -36,16 +37,16 @@ function ProjectCard({ data, onViewMore }) {
             </div>
 
             {/* View more triggers modal */}
-            <div className="lg:hidden">
+            <MotionWrapper direction="up" duration={0.2} className="lg:hidden">
               <PrimaryButton text="View more" onClick={() => onViewMore(data)} />
-            </div>
-            <div className="hidden lg:block border border-white hover:shadow-md hover:shadow-white transition-all duration-200" >
+            </MotionWrapper>
+            <MotionWrapper direction="up" duration={0.2} className="hidden lg:block border border-white hover:shadow-md hover:shadow-white transition-all duration-200" >
               <SecondaryButton text="View more" onClick={() => onViewMore(data)} />
-            </div>
+            </MotionWrapper>
           </div>
         </div>
       </div>
-    </div>
+    </MotionWrapper>
   );
 }
 

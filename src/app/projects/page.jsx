@@ -8,6 +8,7 @@ import {
   soloProjects,
   teamProjects,
 } from "@/components/assets/projectData";
+import MotionWrapper from "@/components/shared/motion/MotionWrapper";
 import ProjectModal from "@/components/shared/modal/ProjectModal";
 
 const Page = () => {
@@ -34,7 +35,7 @@ const Page = () => {
       <SectionHeader icon={<Folder />} title="Projects" />
 
       {/* Tabs */}
-      <div className="flex flex-col justify-center items-center mt-5 md:mt-10">
+      <MotionWrapper direction="down" duration={0.7} className="flex flex-col justify-center items-center mt-5 md:mt-10">
         <div className="flex gap-4 md:gap-10 border border-dashed border-gray-500 rounded-3xl">
           {["all", "team", "solo"].map((tab) => (
             <button
@@ -46,10 +47,10 @@ const Page = () => {
             </button>
           ))}
         </div>
-      </div>
+      </MotionWrapper>
 
       {/* Projects */}
-      <div className="content-padding grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-6">
+      <div className="content-padding grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
         {filteredProjects.map((project, idx) => (
           <ProjectCard key={idx} data={project} onViewMore={openModal} />
         ))}

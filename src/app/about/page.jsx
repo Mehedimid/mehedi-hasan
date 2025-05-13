@@ -5,6 +5,7 @@ import Title from "@/components/shared/sectionHeader/Title";
 import PrimaryButton from "@/components/shared/button/PrimaryButton";
 import SectionHeader from "@/components/shared/sectionHeader/SectionHeader";
 import SecondaryTitle from "@/components/shared/sectionHeader/SecondaryTitle";
+import MotionWrapper from "@/components/shared/motion/MotionWrapper";
 
 const AboutPage = () => {
   return (
@@ -18,69 +19,76 @@ const AboutPage = () => {
         <div className="content-padding">
           <div className="flex flex-col md:flex-row gap-5">
             {/* Left Column */}
-            <div className="md:w-2/3">
-              <SecondaryTitle text="Fullstack Developer" />
-              <p className="sm:text-sm md:text-base lg:text-lg leading-relaxed mb-8">
-                I am a passionate Fullstack Web Developer with a strong focus on
-                building modern, scalable web applications. My journey began
-                with frontend development, but I quickly expanded into backend
-                technologies to build complete solutions. I enjoy working with
-                tools like React, Redux, and Tailwind on the frontend, and
-                Node.js, Express, and MongoDB on the backend. I am committed to
-                clean code, performance, and continuously learning the latest
-                technologies to deliver value through my work.
-                <br />
-                Currently I have done two fullstack projects where I was leading
-                the team. All new technologies like Typescript, NextJs, Redux,
-                MongoDB, JWT have been used. You can also explore in my project
-                page.
-              </p>
-            </div>
+            <MotionWrapper  className="md:w-2/3" direction="left" delay={0.2}>
+              <div>
+                <SecondaryTitle text="Fullstack Developer" />
+                <p className="sm:text-sm md:text-base lg:text-lg leading-relaxed mb-8">
+                  I am a passionate Fullstack Web Developer with a strong focus
+                  on building modern, scalable web applications. My journey
+                  began with frontend development, but I quickly expanded into
+                  backend technologies to build complete solutions. I enjoy
+                  working with tools like React, Redux, and Tailwind on the
+                  frontend, and Node.js, Express, and MongoDB on the backend. I
+                  am committed to clean code, performance, and continuously
+                  learning the latest technologies to deliver value through my
+                  work.
+                  <br />
+                  Currently I have done two fullstack projects where I was
+                  leading the team. All new technologies like Typescript,
+                  NextJs, Redux, MongoDB, JWT have been used. You can also
+                  explore in my project page.
+                </p>
+              </div>
+            </MotionWrapper>
 
             {/* Right Column */}
-            <div className="md:w-1/3">
-              <SecondaryTitle text="personal information" />
-              <div className="space-y-3">
-                <p>
-                  <span className="font-semibold text-primary">Name</span> :
-                  Mehedi Hasan
-                </p>
-                <p>
-                  <span className="font-semibold text-primary">Age</span> : 26
-                  Years
-                </p>
-                <p>
-                  <span className="font-semibold text-primary">Address</span> :
-                  Brahmanbaria, Chittagong{" "}
-                </p>
-                <p>
-                  <span className="font-semibold text-primary">Email</span> :{" "}
-                  <a href="mailto:mehedi@example.com">
-                    mehedihasan25276@example.com
+            <MotionWrapper  className="md:w-1/3" direction="right" delay={0.2}>
+              <div>
+                <SecondaryTitle text="personal information" />
+                <div className="space-y-3">
+                  <p>
+                    <span className="font-semibold text-primary">Name</span> :
+                    Mehedi Hasan
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Age</span> : 26
+                    Years
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Address</span>{" "}
+                    : Brahmanbaria, Chittagong{" "}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Email</span> :{" "}
+                    <a href="mailto:mehedi@example.com">
+                      mehedihasan25276@example.com
+                    </a>
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Phone</span> :
+                    (+880) 185 768 3573
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Whatsapp</span>{" "}
+                    01857683573
+                  </p>
+                </div>
+                <div
+                  className="mt-5
+              "
+                >
+                  {" "}
+                  <a href="resume_mehedi.pdf" download>
+                    <PrimaryButton text="Download resume" />
                   </a>
-                </p>
-                <p>
-                  <span className="font-semibold text-primary">Phone</span> :
-                  (+880) 185 768 3573
-                </p>
-                <p>
-                  <span className="font-semibold text-primary">Whatsapp</span>{" "}
-                  01857683573
-                </p>
+                </div>
               </div>
-              <div className="mt-5
-              ">
-                {" "}
-                <a href="resume_mehedi.pdf" download>
-                  <PrimaryButton text="Download resume" />
-                </a>
-              </div>
-            </div>
+            </MotionWrapper>
           </div>
         </div>
 
         {/* Skills Section */}
-        <div className="grid md:grid-cols-2 gap-3 md:gap-10 content-padding">
+        <MotionWrapper direction="up" className="grid md:grid-cols-2 gap-3">
           {/* Frontend Skills */}
           <div className="relative overflow-hidden">
             <div className="flex justify-center">
@@ -118,10 +126,10 @@ const AboutPage = () => {
               <SkillBar skill="Zod / Validation" percent={100} />
             </ul>
           </div>
-        </div>
+        </MotionWrapper>
 
         {/* Education Section */}
-        <div className="content-padding">
+        <MotionWrapper direction="up" className="content-padding">
           <div className="flex flex-col items-center">
             <Title text="education" />
           </div>
@@ -143,7 +151,7 @@ const AboutPage = () => {
               <p className="text-xs text-gray-400">2016 - 2018</p>
             </div>
           </div>
-        </div>
+        </MotionWrapper>
       </div>
     </section>
   );

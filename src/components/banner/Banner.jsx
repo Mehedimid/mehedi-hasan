@@ -1,9 +1,10 @@
 "use client";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 import Image from "next/image";
 import { Github, Linkedin, Facebook } from "lucide-react";
 import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
+import MotionWrapper from "../shared/motion/MotionWrapper";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -24,52 +25,56 @@ const Banner = () => {
 
       {/* Overlay content */}
       <div className="relative z-10 text-center text-white max-w-3xl px-4">
-        <h1
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${playfair.className} uppercase`}
-        >
-          Mehedi <span className="text-primary">Hasan</span>
-        </h1>
-        <div className="text-xl md:text-2xl text-gray-300 mb-6 font-semibold">
-          <Typewriter
-          options={{
-            strings: [
-              'Full Stack Developer',
-              'Mern Stack Developer',
-              'React & Next.js Expert',
-              'MongoDB expert',
-            ],
-            autoStart: true,
-            loop: true,
-            delay: 50,
-            deleteSpeed: 30,
-          }}
-        />
-        </div>
+        <MotionWrapper direction="down" delay={0.4}>
+          <h1
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 ${playfair.className} uppercase`}
+          >
+            Mehedi <span className="text-primary">Hasan</span>
+          </h1>
+          <div className="text-xl md:text-2xl text-gray-300 mb-6 font-semibold">
+            <Typewriter
+              options={{
+                strings: [
+                  "Full Stack Developer",
+                  "Mern Stack Developer",
+                  "React & Next.js Expert",
+                  "MongoDB expert",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 80,
+                deleteSpeed: 30,
+              }}
+            />
+          </div>
+        </MotionWrapper>
 
         {/* Social Icons */}
-        <div className="flex justify-center gap-6">
-          <Link
-            href="https://github.com/Mehedimid"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github className="hover:text-white text-gray-300" size={28} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/mehedimid/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin className="hover:text-white text-gray-300" size={28} />
-          </Link>
-          <Link
-            href="https://web.facebook.com/mehedimid"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Facebook className="hover:text-white text-gray-300" size={28} />
-          </Link>
-        </div>
+        <MotionWrapper direction="up" delay={0.4}>
+          <div className="flex justify-center gap-6">
+            <Link
+              href="https://github.com/Mehedimid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="hover:text-white text-gray-300" size={28} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/mehedimid/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="hover:text-white text-gray-300" size={28} />
+            </Link>
+            <Link
+              href="https://web.facebook.com/mehedimid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="hover:text-white text-gray-300" size={28} />
+            </Link>
+          </div>
+        </MotionWrapper>
       </div>
     </section>
   );

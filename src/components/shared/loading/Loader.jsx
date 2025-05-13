@@ -20,7 +20,7 @@ const Loader = () => {
         }
       `}</style>
 
-      <div className="fixed inset-0 z-50 bg-gray-800 flex flex-col justify-center items-center text-center">
+      <div className="fixed inset-0 z-50 bg-secondary flex flex-col justify-center items-center text-center">
         <div className="flex items-center space-x-4 mb-4">
           <span className="w-4 h-4 rounded-full bg-cyan-400 animate-pulse-slow" />
           <span className="w-4 h-4 rounded-full bg-teal-400 animate-pulse-medium" />

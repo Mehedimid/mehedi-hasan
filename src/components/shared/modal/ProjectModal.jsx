@@ -1,11 +1,12 @@
 import { X, ExternalLink } from "lucide-react";
 import Title from "../sectionHeader/Title";
 import SecondaryTitle from "../sectionHeader/SecondaryTitle";
+import MotionWrapper from "../motion/MotionWrapper";
 
 const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center px-4">
-      <div className="bg-[#252525] text-white w-full max-w-4xl max-h-[90vh] rounded-md overflow-hidden relative">
+      <MotionWrapper direction="up" duration={0.7} className="bg-[#252525] text-white w-full max-w-4xl max-h-[90vh] rounded-md overflow-hidden relative">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -18,7 +19,7 @@ const ProjectModal = ({ project, onClose }) => {
         <div className="p-8 overflow-y-auto max-h-[90vh] space-y-8">
           {/* Title + Subtitle */}
           <div>
-            <Title text={project.title} />
+            <a href={project.liveLink}><Title hover="hover:text-primary transistion duration-300" text={project.title} /></a>
             <p className="text-gray-300 text-sm mt-1 italic">{project.subtitle}</p>
           </div>
 
@@ -89,7 +90,7 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
           )}
         </div>
-      </div>
+      </MotionWrapper>
     </div>
   );
 };

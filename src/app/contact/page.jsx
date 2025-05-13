@@ -14,6 +14,7 @@ import {
   Github,
   Linkedin,
 } from "lucide-react";
+import MotionWrapper from "@/components/shared/motion/MotionWrapper";
 
 // Define social links with fallbacks
 const socialLinks = {
@@ -50,7 +51,7 @@ const ContactPage = () => {
       <div className="content-padding">
         <div className="flex flex-col lg:flex-row gap-5 md:gap-10">
           {/* Left Form Section */}
-          <div className="w-full lg:w-7/12">
+          <MotionWrapper direction="left" duration={0.4} className="w-full lg:w-7/12">
             <div className="flex justify-center">
               <Title text="Let's Talk" />
             </div>
@@ -121,11 +122,11 @@ const ContactPage = () => {
                 <PrimaryButton text="send message" />
               </div>
             </form>
-          </div>
+          </MotionWrapper>
 
           {/* Right Info Section */}
           <div className="w-full lg:w-5/12">
-            <div>
+            <MotionWrapper direction="right" duration={0.4}>
               <div className="flex justify-center">
                 <Title text="Found me" />
               </div>
@@ -201,7 +202,7 @@ const ContactPage = () => {
                   <Twitter className="w-8 h-8 hover:text-white transition" />
                 </Link>
               </div>
-            </div>
+            </MotionWrapper>
           </div>
         </div>
       </div>
